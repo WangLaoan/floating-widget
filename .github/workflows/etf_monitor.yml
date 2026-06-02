@@ -7,6 +7,12 @@ on:
     # 美股收盘后检查 (UTC 21:00)
     - cron: "0 21 * * 1-5"
   workflow_dispatch:
+    inputs:
+      test:
+        description: '发送测试推送'
+        required: false
+        type: boolean
+        default: false
 
 jobs:
   monitor:
@@ -23,10 +29,10 @@ jobs:
           python-version: "3.12"
 
       - name: Run monitor
-        run: python scripts/monitor_pushplus.py
+        run: python scripts/monitor_pushplus.py ${{ github.event.inputs.test == 'true' && '--test' || '' }}
 
       - name: Commit state changes
-        if: always()
+        if: always() && github.event.inputs.test != 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"

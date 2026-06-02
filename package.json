@@ -1,0 +1,31 @@
+{
+  "name": "valuation-thermometer",
+  "version": "1.0.0",
+  "description": "桌面悬浮半透明指数估值小组件",
+  "main": "dist/main/main.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:renderer\" \"npm run dev:main\"",
+    "dev:renderer": "vite",
+    "dev:main": "tsc -p tsconfig.node.json && electron .",
+    "build:renderer": "tsc -p tsconfig.json && vite build",
+    "build:main": "tsc -p tsconfig.node.json",
+    "build": "npm run build:renderer && npm run build:main",
+    "start": "electron ."
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.20",
+    "concurrently": "^8.2.2",
+    "electron": "^28.3.3",
+    "postcss": "^8.4.41",
+    "tailwindcss": "^3.4.10",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.2"
+  }
+}

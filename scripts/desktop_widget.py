@@ -26,7 +26,7 @@ except Exception:
 # =========================== 配置 ===========================
 ROOT = Path(__file__).resolve().parent.parent.parent
 DB_PATH = ROOT / "data" / "etf_research.db"
-REFRESH_SEC = 60  # 刷新间隔 (秒)
+REFRESH_SEC = 10  # 刷新间隔 (秒)
 
 WATCHLIST = {
     "515180": {"name": "中证红利",     "market": "sh", "type": "etf"},

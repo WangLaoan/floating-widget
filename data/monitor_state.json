@@ -5,5 +5,12 @@
     "deviation": -4.2,
     "price": 1.59,
     "daily_ma": 1.6591
+  },
+  "563020": {
+    "alert_active": true,
+    "last_push": "2026-06-16 14:29:42",
+    "deviation": -4.3,
+    "price": 1.138,
+    "daily_ma": 1.1887
   }
 }

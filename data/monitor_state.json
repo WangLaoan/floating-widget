@@ -14,10 +14,6 @@
     "daily_ma": 1.1887
   },
   "515180": {
-    "alert_active": true,
-    "last_push": "2026-06-18 13:51:55",
-    "deviation": -5.1,
-    "price": 1.346,
-    "daily_ma": 1.418
+    "alert_active": false
   }
 }

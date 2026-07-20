@@ -10,10 +10,6 @@
     "alert_active": false
   },
   "515180": {
-    "alert_active": true,
-    "last_push": "2026-07-17 16:29:25",
-    "deviation": -4.2,
-    "price": 1.352,
-    "daily_ma": 1.4107
+    "alert_active": false
   }
 }
